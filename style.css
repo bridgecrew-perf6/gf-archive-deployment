@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul{
+    margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+
+}
+li{
+    display: inline; 
+    padding: 8px;
+}
+nav a:hover{
+    font-weight: bold;
+} 
+body{
+background-color: #F6F6F6;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery img{
+    margin: 0.5vmax;
+}
+
