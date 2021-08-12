@@ -62,4 +62,6 @@ hr{
     color: darkgray;
     background-color: darkgray;
 }
-
+body{
+    background-image: url(./Pictures/big/background_art.jfif);
+}
