@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul{
+    margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+
+}
+li{
+    display: inline; 
+    padding: 8px;
+}
+nav{
+    background-color: #EFEFEF;
+}
+nav a:hover{
+    font-weight: bold;
+} 
+body{
+background-color: white;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+}
+.gallery img{
+    padding: 5px;
+    transition: 0.5s;
+
+}
+.gallery img:hover{
+    transform: scale(1.05);
+}
+figure{
+    background-color: #EFEFEF;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 2px;
+}
+hr{
+    border: none;
+    height: 2px;
+    color: darkgray;
+    background-color: darkgray;
+}
+header .ig_btn{
+    margin-top: 20px;
+    margin-right: 7%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about h1{
+    font-size: 60px;
+    margin-left: 7%;
+    margin-top: 100px;
+}
+.about p{
+    font-size: 25px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+.about a{
+    color: black;
+}
+.about img{
+    width: 300px;
+    height: auto;
+    float: right;
+
+    margin-left: 55px;
+    margin-right: 400px;
+    margin-top: 60px;
+}
+.firstchar{
+   font-size: 35px;
+   font-weight: bold;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    text-align: center;
+}
+footer a{
+    color: black;
+}
