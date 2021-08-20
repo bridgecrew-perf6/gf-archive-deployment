@@ -69,10 +69,13 @@ hr{
     background-color: darkgray;
 }
 .ig_btn{
-    margin: auto;
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
+}
+.ig_btn a{
+    margin: 0;
 }
 .about{
     padding-bottom: 2.5rem;
