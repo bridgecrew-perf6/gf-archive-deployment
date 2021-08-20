@@ -69,8 +69,7 @@ hr{
     background-color: darkgray;
 }
 .ig_btn{
-    margin-top: 20px;
-    margin-right: 20px;
+    margin: auto;
     position: absolute;
     top: 0;
     right: 0;
