@@ -128,9 +128,4 @@ footer p{
 footer a{
     color: black;
 }
-@media only screen and (max-width: 550px)
-	.about img{
-		margin-right: auto;
-		margin-left: auto;
-		align-content: center;
-}
+
