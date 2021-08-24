@@ -30,7 +30,7 @@ nav a:hover{
 } 
 body{
 background-color: white;
-background-image: url(./Pictures/big/bg_hell.jpg);
+background-image: url(../Pictures/big/bg_hell.jpg);
 min-height: 100vh;
 position: relative; 
 
