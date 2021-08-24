@@ -1,4 +1,5 @@
-*{
+html{
+	height: 100%;
     box-sizing: border-box;
 }
 header{
@@ -29,10 +30,10 @@ nav a:hover{
     font-weight: bold;
 } 
 body{
-background-color: white;
-background-image: url(../Pictures/big/bg_hell.jpg);
-min-height: 100vh;
-position: relative; 
+	min-height: 100vh;
+	background-color: white;
+	background-image: url(../Pictures/big/bg_hell.jpg);
+
 
 }
 .gallery{
@@ -40,7 +41,7 @@ position: relative;
     justify-content: center;
     align-items: left;
     flex-wrap: wrap;
-    padding-bottom: 2.5rem;
+    
  
 }
 .gallery img{
@@ -69,7 +70,7 @@ hr{
     background-color: darkgray;
 }
 .ig_btn{
-    margin: 0;
+    margin: 10px;
     position: absolute;
     top: 0;
     right: 0;
@@ -110,22 +111,23 @@ hr{
    font-size: 35px;
    font-weight: bold;
 }
-body footer{
-    position: absolute;
+.footer{
+    position: sticky;
+    top: 100%;
+    bottom: 0;
+    height: 52px;
     width: 100%;
-    bottom: 0pt;
-    left: 0pt;
     background-color: rgba(239, 239, 239, 0.5);
     border-top: solid;
     border-color: rgba(169, 169, 169, 0.6);
     border-width: 2px;
-    height: 2.5rem;
+
 
 }
-footer p{
+.footer {
     text-align: center;
 }
-footer a{
+.footer a{
     color: black;
 }
 @media screen and (max-width: 600px){
