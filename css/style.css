@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul{
+    margin: 0; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+
+}
+li{
+    display: inline; 
+    padding: 8px;
+}
+nav{
+    background-color: #efefef88;
+}
+nav a:hover{
+    font-weight: bold;
+} 
+body{
+background-color: white;
+background-image: url(./Pictures/big/bg_hell.jpg);
+min-height: 100vh;
+position: relative; 
+
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+ 
+}
+.gallery img{
+    padding: 5px;
+        transition: 0.5s;
+
+}
+.gallery img:hover{
+    transform: scale(1.05);
+}
+figure{
+    background-color: rgba(239, 239, 239, 0.5);
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-color: rgba(169, 169, 169, 0.6);
+    border-style: solid;
+    border-width: 2px;
+}
+hr{
+    border: none;
+    height: 2px;
+    color: darkgray;
+    background-color: darkgray;
+}
+.ig_btn{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ig_btn a{
+    margin: 0;
+}
+.about{
+    padding-bottom: 2.5rem;
+}
+
+.about h1{
+    font-size: 60px;
+    margin-left: 7%;
+    margin-top: 100px;
+}
+.about p{
+    font-size: 25px;
+    margin-left: 7%;
+    margin-right: 7%;
+    text-align: justify;
+}
+.about p .last{
+    margin-bottom: 100px;
+}
+.about a{
+    color: black;
+}
+.about img{
+    width: 300px;
+    height: auto;
+    float: right;
+
+    margin-left: 55px;
+    margin-right: 20%;
+}
+.firstchar{
+   font-size: 35px;
+   font-weight: bold;
+}
+body footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0pt;
+    left: 0pt;
+    background-color: rgba(239, 239, 239, 0.5);
+    border-top: solid;
+    border-color: rgba(169, 169, 169, 0.6);
+    border-width: 2px;
+    height: 2.5rem;
+
+}
+footer p{
+    text-align: center;
+}
+footer a{
+    color: black;
+}
+@media screen and (max-width: 600px){
+    .about img{
+        display: block;
+        width: 300px;
+        height: auto;
+        margin: auto;
+	margin-right: 20px;
+       
+    }
+}
