@@ -12,6 +12,10 @@ nav a{
     color: black;
     
 }
+.title {
+    text-decoration: none;
+    color: black;
+}
 ul{
     margin: 0; 
 	padding: 5px; 
