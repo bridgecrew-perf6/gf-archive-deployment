@@ -5,7 +5,6 @@ html{
 header{
     text-align: center;
     font-size: 30px;
-    font-family: 'Playfair Display', serif;
 }
 nav a{
     text-decoration: none;
@@ -37,7 +36,7 @@ body{
 	min-height: 96vh;
 	background-color: white;
 	background-image: url(../images/big/bg_hell.jpg);
-
+	font-family: 'Alumni Sans', sans-serif;
 
 }
 .gallery{
