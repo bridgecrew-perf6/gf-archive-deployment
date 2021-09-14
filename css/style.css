@@ -73,19 +73,22 @@ hr{
     color: darkgray;
     background-color: darkgray;
 }
-.ig_btn{
-    margin: 10px;
-    position: absolute;
-    top: 0;
+
+.sm_btn{
+	position: absolute;
     right: 0;
-}
-.ig_btn a{
-    margin: 0;
+    top: 0;
+    display: block;
+    margin: 10px;
+
 }
 .about{
     padding-bottom: 2.5rem;
 }
-
+.inspo{
+	margin: 80px;
+	margin-top: 20px;
+}
 .about h1{
     font-size: 60px;
     margin-left: 7%;
