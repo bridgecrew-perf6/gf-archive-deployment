@@ -30,7 +30,7 @@ nav{
     background-color: #efefef88;
 }
 nav a:hover{
-    font-weight: bold;
+    color: gray;
 } 
 body{
 	min-height: 96vh;
