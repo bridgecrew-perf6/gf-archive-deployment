@@ -1,159 +1,73 @@
-html{
-	height: 100%;
-    box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
+
 header{
-    text-align: center;
-    font-size: 30px;
-}
-nav a{
-    text-decoration: none;
-    color: black;
-    
-}
-.title {
-    text-decoration: none;
-    color: black;
-}
-ul{
-    margin: 0; 
-	padding: 5px; 
-	list-style-type: none; 
-	text-align: center; 
-
-}
-li{
-    display: inline; 
-    padding: 8px;
-}
-nav{
-    background-color: #efefef88;
-}
-nav a:hover{
-    color: gray;
-} 
-body{
-	min-height: 96vh;
-	background-color: white;
-	background-image: url(../images/big/bg_hell.jpg);
-	font-family: 'Alumni Sans', sans-serif;
-
-}
-.gallery{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-wrap: wrap;
-    
- 
-}
-.gallery img{
-    padding: 5px;
-        transition: 0.5s;
-
-}
-.gallery img:hover{
-    transform: scale(1.05);
-}
-figure{
-    /*background-color: rgba(239, 239, 239, 0.5); 
-    padding: 20px;
-    
-    border-color: rgba(169, 169, 169, 0.6);
-    border-style: solid;
-    border-width: 2px; */
-    text-align: center;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-hr{
-    border: none;
-    height: 2px;
-    color: darkgray;
-    background-color: darkgray;
+    width: 100vw;
+    height: 100px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    font-family: 'Poppins';
 }
 
-.sm_btn{
-	position: absolute;
-    right: 0;
-    top: 0;
+header .inner{
+    width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
+    height: 100%;
     display: block;
-    margin: 10px;
+    margin: 0 auto;
+}
 
+header .logo{
+    display: table;
+    height: 100%;
+    float: left;
 }
-.about{
-    padding-bottom: 2.5rem;
+
+header .logo div{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
-.inspo{
-	margin: 80px;
-	margin-top: 20px;
+
+header .logo img{
+    height: 50px;
+    margin-top: 5px; /* Optical alignment of the logo */
 }
-.about h1{
-    font-size: 60px;
-    margin-left: 7%;
-    margin-top: 100px;
-}
-.about p{
-    font-size: 25px;
-    margin-left: 7%;
-    margin-right: 7%;
-    text-align: justify;
-}
-.about p .last{
-    margin-bottom: 100px;
-}
-.about a{
-    color: black;
-}
-.about img{
-    width: 300px;
-    height: auto;
+
+header nav{
     float: right;
-
-    margin-left: 55px;
-    margin-right: 20%;
+    height: 100%;
 }
-.firstchar{
-   font-size: 35px;
-   font-weight: bold;
-}
-.footer{
-    position: sticky;
-    top: 100%;
-    bottom: 0;
-    height: 52px;
-    width: 100%;
-    background-color: rgba(239, 239, 239, 0.5);
-    border-top: solid;
-    border-color: rgba(169, 169, 169, 0.6);
-    border-width: 2px;
 
-
+header nav li{
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
 }
-.footer {
-    text-align: center;
-}
-.footer a{
-    color: black;
-}
-@media screen and (max-width: 839px) {
-	
-	.pic{
-		position: relative;
-	}
-    .pic img {
-    	display: block;
-		margin-left: auto;
-		margin-right: auto;
-		float: none;
 
-    }
-    .about h1{
-    	text-align: center;
-    	margin: 0;
-    	margin-top: 50px;
-    	margin-bottom: 25px;
-    }
+header nav li:last-of-type{
+    margin-right: 0;
+}
 
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a{
+    color: #101010;
+}
+
+header nav .button{
+    background-color: #1ab26b; /* This HEX is the color of the button */
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+header nav .button:hover{
+    filter: brightness(1.05);
 }
