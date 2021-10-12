@@ -67,7 +67,7 @@ nav{
     transition: transform 0.5s ease-in;
   }
   .nav-links li{
-    opacity: 1;
+    opacity: 0;
   }
   .burger{
     display: block;
