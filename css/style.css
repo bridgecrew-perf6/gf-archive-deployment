@@ -72,3 +72,6 @@ header nav .button{
 header nav .button:hover{
     filter: brightness(1.05);
 }
+header h1{
+		color: white;
+}
