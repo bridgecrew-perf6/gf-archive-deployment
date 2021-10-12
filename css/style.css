@@ -57,6 +57,7 @@ nav{
     right: 0px;
     height: 92vh;
     top: 8vh;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +74,6 @@ nav{
 }
 .nav-active{
   transform: translateX(0%);
-  background-color: black;
 }
 
 @keyframes navLinkFade {
