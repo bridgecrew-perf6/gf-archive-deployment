@@ -10,7 +10,8 @@ const navSlide = () => {
 
 //Animate links
   navlinks.forEach((link, index) => {
-    if(link.style.animation){
+    console.log(index / 5);
+    if (link.style.animation) {
       link.style.animation = '';
     }
     else {
