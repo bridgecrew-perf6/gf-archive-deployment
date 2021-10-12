@@ -75,9 +75,6 @@ nav{
 .nav-active{
   transform: translateX(0%);
 }
-.nav-active a{
-  color: rgb(226, 226, 226);
-}
 
 @keyframes navLinkFade {
   from{
