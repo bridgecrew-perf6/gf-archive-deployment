@@ -1,11 +1,12 @@
-function navSlide() {
+const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
-  document.getElementById("demo").innerHTML = "Hello World";
-  
-  burger.addEventListener('click', function() {
+
+  burger.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
+    console.log("test");
 
   });
 }
+
 navSlide();
