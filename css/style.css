@@ -73,6 +73,7 @@ nav{
 }
 .nav-active{
   transform: translateX(0%);
+  background-color: black;
 }
 
 @keyframes navLinkFade {
