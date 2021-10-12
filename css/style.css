@@ -48,6 +48,10 @@ nav{
   }
   .nav-navLinks a{
     color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
   }
 }
 
@@ -68,8 +72,12 @@ nav{
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
-  .navLinks{
+  .navLinks a{
     color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
   }
   .nav-links li{
     opacity: 0;
