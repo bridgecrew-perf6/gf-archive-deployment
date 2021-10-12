@@ -46,6 +46,9 @@ nav{
   .nav-links{
     width: 50%;
   }
+  .nav-links a{
+    color: rgb(226, 226, 226);
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -64,6 +67,9 @@ nav{
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+  }
+  .nav-links a{
+    color: rgb(226, 226, 226);
   }
   .nav-links li{
     opacity: 0;
