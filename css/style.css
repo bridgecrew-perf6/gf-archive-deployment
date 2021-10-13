@@ -32,7 +32,11 @@ nav{
   text-decoration: none;
   letter-spacing: 2px;
   font-weight: bold;
+  opacity: 0.8;
   font-size: 14px;
+}
+.nav-links a:hover{
+  opacity: 1;
 }
 .burger{
   display: none;
@@ -129,6 +133,8 @@ footer ul li a {
   text-decoration: none;
   opacity: 0.8;
   font-size: 14px;
+  font-weight: bold;
+
 }
 footer ul li{
   display: inline-block;
@@ -142,5 +148,6 @@ footer .copyright{
   text-align: center;
   font-size: 12px;
   color: #454545;
-  font-style: bold;
+  font-weight: bold;
+
 }
