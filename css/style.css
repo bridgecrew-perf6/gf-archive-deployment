@@ -156,6 +156,9 @@ footer .copyright{
   color: #454545;
   font-weight: bold;
 }
+.container{
+  min-height: 100%;
+}
 main{
   overflow: auto;
   padding-bottom: 100px;
