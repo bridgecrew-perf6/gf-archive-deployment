@@ -102,8 +102,8 @@ footer{
   position: relative;
   padding: 17px 0;
   background-color: black;
-  height: 85px;
-  margin-top: -85px;
+  height: 95px;
+  margin-top: -95px;
   clear: both;
 }
 footer .social {
