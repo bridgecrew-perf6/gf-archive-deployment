@@ -157,10 +157,10 @@ footer .copyright{
   font-weight: bold;
 }
 nav{
-  min-height: 15%
+  min-height: 10%
 }
 .container{
-  min-height: 85%;
+  min-height: 90%;
 }
 main{
   overflow: auto;
