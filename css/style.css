@@ -106,13 +106,11 @@ footer .social {
 footer .social a{
   font-size: 25px;
   color: inherit;
-  border: 1px solid #ccc;
   width: 30px;
   height: 30px;
   line-height: 28px;
   display: inline-block;
   text-align: center;
-  border-radius: 50%;
   margin: 0 8px;
   opacity: 0.75;
 }
