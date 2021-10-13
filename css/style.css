@@ -88,7 +88,7 @@ nav{
 }
 .nav-active{
   transform: translateX(0%);
-  max-height: 70%;
+  max-height: 80%;
 }
 
 @keyframes navLinkFade {
