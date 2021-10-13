@@ -96,6 +96,7 @@ nav{
 
 footer{
   position: relative;
+  clear: both;
   padding: 17px 0;
   background-color: black;
 }
@@ -149,6 +150,10 @@ footer .copyright{
   color: #454545;
   font-weight: bold;
 }
+.container{
+  min-height: 100%;
+}
 main{
-  min-height: 100%
+  overflow: auto;
+  height: 100%
 }
