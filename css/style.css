@@ -149,3 +149,6 @@ footer .copyright{
   color: #454545;
   font-weight: bold;
 }
+main{
+  min-height: 100%
+}
