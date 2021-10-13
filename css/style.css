@@ -156,8 +156,11 @@ footer .copyright{
   color: #454545;
   font-weight: bold;
 }
+nav{
+  min-height: 15%
+}
 .container{
-  min-height: 100%;
+  min-height: 85%;
 }
 main{
   overflow: auto;
