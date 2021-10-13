@@ -14,8 +14,8 @@ nav{
 }
 .logo{
   color: rgb(226, 226, 226);
-  letter-spacing: 5px;
-  font-size: 20px;
+  letter-spacing: 6px;
+  font-size: 22px;
 }
 .nav-links{
   display: flex;
