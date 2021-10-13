@@ -124,7 +124,7 @@ footer ul{
   text-align: center;
 }
 footer ul li a {
-  color: inherit;
+  color: rgb(226, 226, 226);
   text-decoration: none;
   opacity: 0.8;
 }
