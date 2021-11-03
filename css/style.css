@@ -82,7 +82,6 @@ nav{
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    padding-bottom: 100px;
   }
   .nav-links li{
     opacity: 1;
@@ -93,7 +92,7 @@ nav{
 }
 .nav-active{
   transform: translateX(0%);
-  padding-bottom: 100px;
+
 }
 
 @keyframes navLinkFade {
