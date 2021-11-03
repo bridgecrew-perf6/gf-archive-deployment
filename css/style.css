@@ -32,7 +32,7 @@ nav{
   display: flex;
   justify-content: space-around;
   width: 30%;
-  max-height: 100%;
+  max-height: 90%;
 }
 .nav-links li{
   list-style: none;
@@ -94,7 +94,7 @@ nav{
 .nav-active{
   transform: translateX(0%);
   padding-bottom: 100px;
-  min-height: 100%;
+  min-height: 90%;
 }
 
 @keyframes navLinkFade {
