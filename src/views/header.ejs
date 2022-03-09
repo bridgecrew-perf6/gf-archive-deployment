@@ -1,0 +1,26 @@
+<header>
+  <% if(header.currSite == 1){ %>
+    <h1>GF-Archive | <p style="display: inline-block;">Home</p></h1>
+  <% } %> 
+  <% if(header.currSite == 2){ %>
+    <h1>GF-Archive | <p style="display: inline-block;">Blog</p></h1>
+  <% } %>
+  <% if(header.currSite == 3){ %>
+    <h1>GF-Archive | <p style="display: inline-block;">Kontakt</p></h1>
+  <% } %>  
+  <div class="menu">
+    <% if(header.currSite == 1){ %>
+        <a href="/home"><p style="font-weight: bold">Home</p></a>
+        <a href="/blog"><p>Blog</p></a>
+        <a href="/contact"><p>Kontakt</p></a>
+    <% } %> <% if(header.currSite == 2){ %>
+        <a href="/home"><p>Home</p></a>
+        <a href="/blog"><p style="font-weight: bold">Blog</p></a>
+        <a href="/contact"><p>Kontakt</p></a>
+    <% } %> <% if(header.currSite == 3){ %>
+        <a href="/home"><p>Home</p></a>
+        <a href="/blog"><p>Blog</p></a>
+        <a href="/contact"><p style="font-weight: bold">Kontakt</p></a>
+    <% } %>
+  </div>
+</header>
