@@ -20,21 +20,6 @@ header h1{
 header h1 p{
     font-size: 17px;
 }
-header .menu{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;;
-    padding-right: 20%;
-    padding-left: 20%;
-    align-items: center;
-}
-header .menu a{
-    text-decoration: none;
-    color: white;
-}
-header .menu a:hover{
-    color: rgb(184, 184, 184);
-}
 main{
     margin-left: 10%;
     margin-right: 10%;
@@ -43,4 +28,26 @@ main{
 }
 main .text{
     padding-left: 8px;
+}
+@media only screen and (min-width: 700px) {
+    header .menu{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px;;
+        padding-right: 10%;
+        padding-left: 20%;
+        align-items: center;
+    }
+    header .menu a{
+        text-decoration: none;
+        color: white;
+    }
+    header .menu a:hover{
+        color: rgb(184, 184, 184);
+    }
+}
+@media only screen and (max-width: 700px) {
+    header .menu{
+        visibility: hidden;
+    }
 }
