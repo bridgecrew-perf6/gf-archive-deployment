@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/88160cb0cc.js" crossorigin="anonymous"></script>
+    <script src="controller.js"></script>
     <title>Kontakt</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('header') %>
-</body>
+    <main>
+      <div class="content">
+        <form class="contactForm" action="" method="post" >
+          <h1>Kontakt</h1>
+          <input
+            class="formFirstname"
+            type="text"
+            placeholder="Vorname"
+            name="formFirstname"
+            id=""
+            required
+          />
+          <input
+            class="formLastname"
+            type="text"
+            placeholder="Nachname"
+            name="formLastname"
+            id=""
+            required
+          />
+          <input
+            class="formEmail"
+            type="email"
+            placeholder="Email-Adresse"
+            name="formEmail"
+            id=""
+            required
+          />
+          <textarea
+            class="formMessage"
+            placeholder="Nachricht, Feedback"
+            name="formMessage"
+            id=""
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input
+            class="formSubmit"
+            type="submit"
+            name=""
+            id=""
+            value="Senden"
+          />
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

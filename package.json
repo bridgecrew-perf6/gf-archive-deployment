@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/gifederspiel/gf_archive#readme",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "nodemailer": "^6.7.2",
     "path": "^0.12.7"
   }
 }

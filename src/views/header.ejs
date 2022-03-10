@@ -1,12 +1,30 @@
 <header>
   <% if(header.currSite == 1){ %>
-    <h1>GF-Archive | <p style="display: inline-block;">Home</p></h1>
+    <h1>GF-Archive <h1 class="mobileDropdown">|</h1>   
+      <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
+        <option value="" selected disabled hidden>Home</option>
+        <option value="Blog">Blog</option>
+        <option value="Kontakt">Kontakt</option>
+      </select>
+    </h1>
   <% } %> 
   <% if(header.currSite == 2){ %>
-    <h1>GF-Archive | <p style="display: inline-block;">Blog</p></h1>
+    <h1>GF-Archive <h1 class="mobileDropdown">|</h1>   
+      <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
+        <option value="" selected disabled hidden>Blog</option>
+        <option value="Kontakt">Kontakt</option>
+        <option value="Home">Home</option>
+      </select>
+    </h1>
   <% } %>
   <% if(header.currSite == 3){ %>
-    <h1>GF-Archive | <p style="display: inline-block;">Kontakt</p></h1>
+    <h1>GF-Archive <h1 class="mobileDropdown">|</h1>   
+      <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
+        <option value="" selected disabled hidden>Kontakt</option>
+        <option value="Home">Home</option>
+        <option value="Blog">Blog</option>
+      </select>
+    </h1>
   <% } %>  
   <div class="menu">
     <% if(header.currSite == 1){ %>
@@ -24,3 +42,15 @@
     <% } %>
   </div>
 </header>
+<script>
+  function mobileWindowChange(){
+    var select = document.getElementById("mobileNav");
+    var value = select.options[select.selectedIndex].value;
+
+    if(value == "Kontakt"){
+      value = "Contact"
+    }
+
+    window.location.href = "/" + value;
+  }
+</script>
