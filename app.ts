@@ -1,9 +1,14 @@
-const path = require ('path');
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const SMTPConnection = require('nodemailer/lib/smtp-connection');
-const { getMaxListeners } = require('process');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import * as dotenv from 'dotenv';
+import endpoint from './mailEndpoint.config'
+import nodemailer from 'nodemailer';
+import SMTPConnection from 'nodemailer/lib/smtp-connection';
+import { env, getMaxListeners } from 'process';
+import { hostname } from 'os';
+
+
 const app = express();
 const port = 3000;
 
@@ -44,13 +49,24 @@ app.post("/contact", async (req, res) =>{
     var email = req.body.formEmail
     var message = req.body.formMessage
     
-    //Bestätigungsmail
-    const transporterCustomer = nodemailer.createTransport({
+    //Mailconfig
+    dotenv.config()
+    const connection = {
         host: "smtp.gmail.com",
         port: "465",
         auth: {
-            user: "gf.archivee@gmail.com",
-            pass: "Gian_2004"
+            user: await endpoint.mailHost,
+            pass: await endpoint.mailPW
+        },
+    }
+    //Bestätigungsmail
+    const transporterCustomer = nodemailer.createTransport({
+        //@ts-ignore
+        host: connection.host,
+        port: connection.port,
+        auth: {
+            user: connection.auth.user,
+            pass: connection.auth.pass
         },
     });
     const mailOptionsCustomer = {
@@ -62,11 +78,12 @@ app.post("/contact", async (req, res) =>{
 
     //Infomail an mich
     const transporterAdmin = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: "465",
+        //@ts-ignore
+        host: connection.host,
+        port: connection.port,
         auth: {
-            user: "gf.archivee@gmail.com",
-            pass: "Gian_2004"
+            user: connection.auth.user,
+            pass: connection.auth.pass
         },
     });
     const mailOptionsAdmin = {
