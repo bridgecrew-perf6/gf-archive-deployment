@@ -31,6 +31,12 @@ main .content {
   margin-right: 10%;
   margin-left: 10%;
 }
+main .content .formElement{
+  background-color: rgb(240, 240, 240);
+}
+main .content .formElement:focus{
+  outline: none;
+}
 main .content .contactForm {
   margin-top: 5%;
   display: grid;

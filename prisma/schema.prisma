@@ -9,3 +9,11 @@ datasource db {
   provider = "sqlserver"
   url      = env("DATABASE_URL")
 }
+model Blog{
+  blogId    Int @id @default(autoincrement())
+  createdAt DateTime
+  title     String
+  subtitle  String
+  body      String
+  author    String
+}
