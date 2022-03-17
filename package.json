@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gifederspiel/gf_archive#readme",
   "dependencies": {
+    "@prisma/client": "^3.10.0",
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
@@ -31,6 +32,9 @@
     "prisma": "^3.10.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "description": ""

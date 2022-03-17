@@ -1,5 +1,5 @@
 import express from 'express';
-import path from 'path';
+import path, { dirname } from 'path';
 import bodyParser from 'body-parser';
 import * as dotenv from 'dotenv';
 import endpoint from './mailEndpoint.config'
@@ -7,10 +7,14 @@ import nodemailer from 'nodemailer';
 import SMTPConnection from 'nodemailer/lib/smtp-connection';
 import { env, getMaxListeners } from 'process';
 import { hostname } from 'os';
+import { PrismaClient } from '@prisma/client'
+import { TextDecoderStream } from 'stream/web';
 
-
+const prisma = new PrismaClient()
 const app = express();
 const port = 3000;
+
+const currentDate = new Date().toISOString().split('T')[0];
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -44,11 +48,49 @@ app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)
   });
 app.post("/contact", async (req, res) =>{
-    var firstname = req.body.formFirstname
-    var lastname = req.body.formLastname
-    var email = req.body.formEmail
-    var message = req.body.formMessage
-    
+    var firstname = req.body.formFirstname;
+    var lastname = req.body.formLastname;
+    var email = req.body.formEmail;
+    var message = req.body.formMessage;
+
+    const foundUser = await prisma.contactUser.findUnique({
+        where:{
+            email: email,
+        }
+    });
+    if(foundUser != null){
+        if(foundUser.lastContacted.toISOString().split('T')[0] = currentDate){
+        }
+        else{
+            const contactUser = await prisma.contactUser.update({
+                where: {
+                    email: email,
+                },
+                data:{
+                    firstname:      firstname,
+                    lastname:       lastname,
+                    message:        message,
+                    timesContacted: {increment: 1}
+                },
+            })
+            sendMails(firstname, lastname, email, message);
+        }
+    }
+    else{
+        const contactUser = await prisma.contactUser.create({
+            data: {
+                firstname: firstname,
+                lastname: lastname,
+                email: email,
+                message: message,
+            },
+        })
+        sendMails(firstname, lastname, email, message);
+    }
+    res.redirect("/contact");
+});
+
+async function sendMails(firstname: string, lastname:string, email:string, message:string){
     //Mailconfig
     dotenv.config()
     const connection = {
@@ -95,6 +137,4 @@ app.post("/contact", async (req, res) =>{
 
     await transporterCustomer.sendMail(mailOptionsCustomer);
     await transporterAdmin.sendMail(mailOptionsAdmin);
-
-    res.redirect("/contact");
-});
+}
