@@ -58,6 +58,7 @@ app.post("/contact", async (req, res) =>{
             email: email,
         }
     });
+
     if(foundUser != null){
         if(foundUser.lastContacted.toISOString().split('T')[0] = currentDate){
         }

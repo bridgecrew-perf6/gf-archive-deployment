@@ -112,7 +112,7 @@ textarea{
   }
   header .menu {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 50px;
     padding-right: 10%;
     align-items: center;
