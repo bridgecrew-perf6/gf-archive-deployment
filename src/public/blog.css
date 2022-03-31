@@ -12,11 +12,19 @@
 }
 .blogHeader{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%  ;
     text-align: left;
     align-items: baseline;
 }
 .blogHeader .right{
     text-align: right;
     padding-right: 30%;
+}
+.detailArrow:hover{
+    color: rgb(151, 151, 151);
+}
+@media only screen and (max-width: 760px) {
+    .singleBlog{
+        background-color: black;
+    }
 }

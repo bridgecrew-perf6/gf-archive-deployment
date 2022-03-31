@@ -1,3 +1,0 @@
-function mobileDropdown(){
-    window.innerWidth
-}

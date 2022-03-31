@@ -3,7 +3,7 @@
     <h1>GF-Archive <h1 class="mobileDropdown">|</h1>   
       <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
         <option value="" selected disabled hidden>Home</option>
-        <option value="Blog">Blog</option>
+        <option value="Blogs">Blogs</option>
         <option value="Kontakt">Kontakt</option>
       </select>
     </h1>
@@ -11,7 +11,7 @@
   <% if(header.currSite == 2){ %>
     <h1>GF-Archive <h1 class="mobileDropdown">|</h1>   
       <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
-        <option value="" selected disabled hidden>Blog</option>
+        <option value="" selected disabled hidden>Blogs</option>
         <option value="Kontakt">Kontakt</option>
         <option value="Home">Home</option>
       </select>
@@ -22,22 +22,22 @@
       <select onchange="mobileWindowChange()" id="mobileNav" class="mobileDropdown" name="sites" id="sites">
         <option value="" selected disabled hidden>Kontakt</option>
         <option value="Home">Home</option>
-        <option value="Blog">Blog</option>
+        <option value="Blogs">Blogs</option>
       </select>
     </h1>
   <% } %>  
   <div class="menu">
     <% if(header.currSite == 1){ %>
         <a href="/home"     class="home">   <p style="font-weight: bold">Home</p></a>
-        <a href="/blog"     class="blog">   <p>Blog</p></a>
+        <a href="/blogs"    class="blog">   <p>Blogs</p></a>
         <a href="/contact"  class="contact"><p>Kontakt</p></a>
     <% } %> <% if(header.currSite == 2){ %>
         <a href="/home"     class="home">   <p>Home</p></a>
-        <a href="/blog"     class="blog">   <p style="font-weight: bold">Blog</p></a>
+        <a href="/blogs"    class="blog">   <p style="font-weight: bold">Blogs</p></a>
         <a href="/contact"  class="contact"><p>Kontakt</p></a>
     <% } %> <% if(header.currSite == 3){ %>
         <a href="/home"     class="home">   <p>Home</p></a>
-        <a href="/blog"     class="blog">   <p>Blog</p></a>
+        <a href="/blogs"    class="blog">   <p>Blogs</p></a>
         <a href="/contact"  class="contact"><p style="font-weight: bold">Kontakt</p></a>
     <% } %>
     <a href="https://www.instagram.com/gian.federspiel/" class="fa fa-instagram instagramBtn"></a>

@@ -8,6 +8,7 @@ import SMTPConnection from 'nodemailer/lib/smtp-connection';
 import { env, getMaxListeners } from 'process';
 import { hostname } from 'os';
 import { PrismaClient } from '@prisma/client'
+import sendFileIfParamEqualsName from "./src/middleware/fileSender/fileSender";
 import { TextDecoderStream } from 'stream/web';
 
 const prisma = new PrismaClient()
@@ -36,14 +37,23 @@ app.get('/home', (req, res) => {
     res.render(__dirname + '/src/views/index.ejs', {header});
 });
 
-//Blog Router
-app.get('/blog', async (req, res) => {    
+//Blogs Router
+app.get('/blogs', async (req, res) => {    
+    const header = {currSite: 2};  
+    const blogs =  await prisma.blog.findMany({});
+    console.log(req.params)
+
+    res.render(__dirname + '/src/views/blogs.ejs', {header, blogs});
+});
+
+//Single Blog Router
+app.get('/blog/:blogId', sendFileIfParamEqualsName, async (req, res) =>{
     const header = {currSite: 2};  
     const blogs =  await prisma.blog.findMany({});
 
-    res.render(__dirname + '/src/views/blog.ejs', {header, blogs});
+    res.render(__dirname + '/src/views/blog.ejs', {header, blogs, params:req.params})
+})
 
-});
 
 //Contact Router
 app.get('/contact', (req, res) => {

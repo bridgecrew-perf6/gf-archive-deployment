@@ -21,8 +21,19 @@
   <%- include('header') %>
   <main>
     <div class="content">
-      <h1>Blog</h1>
-      <p><%- console.log(params.blogId) %> </p>
+      <h1>Blogs</h1>
+      <div class="blogContainer">
+        <% for(const blog of blogs){ %> 
+          <div class="singleBlog">
+            <div class="blogHeader">
+              <h2><%- blog.title %></h2>
+              <p class="right">von <%- blog.author%> </p>
+              <h3><%- blog.subtitle %></h3>
+              <i class="fa-solid fa-angle-right right detailArrow" onclick="window.location.href='/blog/<%- blog.blogId %>'" style="font-size: 30px;"></i>
+            </div>
+          </div>
+        <% } %> 
+      </div>
     </div>
   </main>
 </body>
