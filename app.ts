@@ -20,11 +20,13 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 //Send public files
 app.use(express.static(path.join(__dirname, '/src/public')));
-console.log(__dirname);
 
 //view engine
 app.set('view engine','ejs');
 
+//Routers
+
+//Home Routers
 app.get('/', (req, res) => {  
     res.redirect('/home');
 });
@@ -34,24 +36,50 @@ app.get('/home', (req, res) => {
     res.render(__dirname + '/src/views/index.ejs', {header});
 });
 
-app.get('/blog', (req, res) => {    
+//Blog Router
+app.get('/blog', async (req, res) => {    
     const header = {currSite: 2};  
-    res.render(__dirname + '/src/views/blog.ejs', {header});
+    const blogs =  await prisma.blog.findMany({});
+
+    res.render(__dirname + '/src/views/blog.ejs', {header, blogs});
+
 });
 
+//Contact Router
 app.get('/contact', (req, res) => {
     const header = {currSite: 3};
     res.render(__dirname + '/src/views/contact.ejs', {header});
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`)
-  });
+//Write a Blog Router
+app.get('/write-a-blog', (req, res) => {
+    res.render(__dirname + '/src/views/write-a-blog.ejs');
+});
+
+app.post("/write-a-blog", async (req, res) =>{
+    let title = req.body.title;
+    let subtitle = req.body.subtitle;
+    let author = req.body.author;
+    let content = req.body.blogContent;
+
+    const createBlog = await prisma.blog.create({
+        data:{
+            title: title,
+            subtitle: subtitle,
+            author: author,
+            body: content,
+            createdAt: new Date(),
+        }
+    })
+
+    res.redirect("/write-a-blog");
+})
+
 app.post("/contact", async (req, res) =>{
-    var firstname = req.body.formFirstname;
-    var lastname = req.body.formLastname;
-    var email = req.body.formEmail;
-    var message = req.body.formMessage;
+    let firstname = req.body.formFirstname;
+    let lastname = req.body.formLastname;
+    let email = req.body.formEmail;
+    let message = req.body.formMessage;
 
     const foundUser = await prisma.contactUser.findUnique({
         where:{
@@ -90,6 +118,11 @@ app.post("/contact", async (req, res) =>{
     }
     res.redirect("/contact");
 });
+
+app.listen(port, () => {
+    console.log(`GF Archive listening on port ${port}!`)
+  });
+
 
 async function sendMails(firstname: string, lastname:string, email:string, message:string){
     //Mailconfig

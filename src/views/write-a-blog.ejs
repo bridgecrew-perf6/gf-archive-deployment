@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./form.css">
+    <script src="controller.js"></script>
+    <title>Write a Blog</title>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <h1>Write a Blog</h1>
+            <form action="" class="createBlogForm" method="post">
+                <input type="text" name="title" class="formElement" placeholder="Titel" required>
+                <input type="text" name="subtitle" class="formElement" placeholder="Untertitel" required>
+                <input type="text" name="author" class="formElement" placeholder="Author" required>
+                <textarea name="blogContent" class="formElement" id="" cols="30" rows="10" placeholder="Inhalt" required></textarea>
+                <input type="submit" value="Blog Posten">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
