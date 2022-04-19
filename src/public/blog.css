@@ -12,16 +12,33 @@
 }
 .blogHeader{
     display: grid;
-    grid-template-columns: 50% 50%  ;
+    grid-template-columns: 80% 20%  ;
     text-align: left;
     align-items: baseline;
+    align-items: center;
 }
 .blogHeader .right{
     text-align: right;
-    padding-right: 30%;
 }
 .detailArrow:hover{
     color: rgb(151, 151, 151);
+}
+.blogTitle{
+    display: flex;
+}
+.blogTitle i{
+    margin-right: 15px;
+}
+.sameLine{
+    display: flex; 
+    align-items: baseline; 
+    gap: 10px;
+}
+.blogLink{
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    justify-content: right;
 }
 @media only screen and (max-width: 760px) {
     .singleBlog{

@@ -41,7 +41,6 @@ app.get('/home', (req, res) => {
 app.get('/blogs', async (req, res) => {    
     const header = {currSite: 2};  
     const blogs =  await prisma.blog.findMany({});
-    console.log(req.params)
 
     res.render(__dirname + '/src/views/blogs.ejs', {header, blogs});
 });
@@ -49,16 +48,25 @@ app.get('/blogs', async (req, res) => {
 //Single Blog Router
 app.get('/blog/:blogId', sendFileIfParamEqualsName, async (req, res) =>{
     const header = {currSite: 2};  
-    const blogs =  await prisma.blog.findMany({});
-
-    res.render(__dirname + '/src/views/blog.ejs', {header, blogs, params:req.params})
+    const blog = await prisma.blog.findUnique({
+        where:{
+            blogId: Number(req.params.blogId)
+        }
+    })
+    let releaseDate
+    if(blog != undefined){
+        releaseDate = String(blog?.createdAt.getDate()) + "." + String(blog.createdAt.getMonth() + 1) + "." + String(blog?.createdAt.getFullYear());
+    }
+    res.render(__dirname + '/src/views/blog.ejs', {header, blog, releaseDate, params:req.params})
 })
 
 
 //Contact Router
+let emailAllowed = true;
 app.get('/contact', (req, res) => {
     const header = {currSite: 3};
-    res.render(__dirname + '/src/views/contact.ejs', {header});
+    emailAllowed = true;
+    res.render(__dirname + '/src/views/contact.ejs', {header, emailAllowed});
 });
 
 //Write a Blog Router
@@ -96,11 +104,12 @@ app.post("/contact", async (req, res) =>{
             email: email,
         }
     });
-
     if(foundUser != null){
         if(foundUser.lastContacted.toISOString().split('T')[0] = currentDate){
+            emailAllowed = false;
         }
         else{
+            emailAllowed = true;
             const contactUser = await prisma.contactUser.update({
                 where: {
                     email: email,
@@ -116,6 +125,7 @@ app.post("/contact", async (req, res) =>{
         }
     }
     else{
+        emailAllowed = true;
         const contactUser = await prisma.contactUser.create({
             data: {
                 firstname: firstname,
@@ -126,7 +136,8 @@ app.post("/contact", async (req, res) =>{
         })
         sendMails(firstname, lastname, email, message);
     }
-    res.redirect("/contact");
+    const header = {currSite: 3};
+    res.render(__dirname + '/src/views/contact.ejs', {header, emailAllowed});
 });
 
 app.listen(port, () => {
@@ -141,8 +152,8 @@ async function sendMails(firstname: string, lastname:string, email:string, messa
         host: "smtp.gmail.com",
         port: "465",
         auth: {
-            user: await endpoint.mailHost,
-            pass: await endpoint.mailPW
+            user: endpoint.mailHost,
+            pass: endpoint.mailPW
         },
     }
     //Bestätigungsmail

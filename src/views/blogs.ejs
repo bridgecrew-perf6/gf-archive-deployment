@@ -26,10 +26,17 @@
         <% for(const blog of blogs){ %> 
           <div class="singleBlog">
             <div class="blogHeader">
-              <h2><%- blog.title %></h2>
-              <p class="right">von <%- blog.author%> </p>
-              <h3><%- blog.subtitle %></h3>
-              <i class="fa-solid fa-angle-right right detailArrow" onclick="window.location.href='/blog/<%- blog.blogId %>'" style="font-size: 30px;"></i>
+              <div>
+                <div class="sameLine">
+                  <h2><%- blog.title %></h2>
+                  <p>von <%- blog.author%> </p>
+                </div>
+                <h3><%- blog.subtitle %></h3>
+              </div>
+              <div class="blogLink">
+                <p>erfahre mehr</p>
+                <i class="fa-solid fa-angle-right right detailArrow" onclick="window.location.href='/blog/<%- blog.blogId %>'" style="font-size: 35px;"></i>
+              </div>
             </div>
           </div>
         <% } %> 

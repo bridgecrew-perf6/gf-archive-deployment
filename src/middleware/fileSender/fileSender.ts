@@ -12,5 +12,4 @@ export default function sendFileIfParamEqualsName(req: express.Request, res: exp
     } else {
         next();
     }
-    console.log("test")
 };
