@@ -2,7 +2,6 @@ import { log } from 'console';
 import express from 'express';
 import { uptime } from 'process';
 import prisma from '../prisma/client';
-import endpoint from '../../mailEndpoint.config'
 import nodemailer from 'nodemailer';
 import SMTPConnection from 'nodemailer/lib/smtp-connection';
 import * as dotenv from 'dotenv';
@@ -72,8 +71,8 @@ async function sendMails(firstname: string, lastname:string, email:string, messa
         host: "smtp.gmail.com",
         port: "465",
         auth: {
-            user: endpoint.mailHost,
-            pass: endpoint.mailPW
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
     }
     //Bestätigungsmail
