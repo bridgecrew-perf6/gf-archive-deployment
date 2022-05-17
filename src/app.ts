@@ -9,7 +9,7 @@ import indexRouter from './routers/index';
 
 
 const app = express();
-const port = 3000;
+const port: number = Number(process.env.PORT) || 3000;
 
 
 app.use(bodyParser.json())
