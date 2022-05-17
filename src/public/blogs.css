@@ -1,0 +1,30 @@
+.singleBlog{
+    background-color: rgb(4, 4, 4);
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.blogContainer{
+    padding-bottom: 20px;
+}
+.blogHeader{
+    display: grid;
+    grid-template-columns: 50% 50%  ;
+    text-align: left;
+    align-items: baseline;
+}
+.blogHeader .right{
+    text-align: right;
+    padding-right: 30%;
+}
+.detailArrow:hover{
+    color: rgb(151, 151, 151);
+}
+@media only screen and (max-width: 760px) {
+    .singleBlog{
+        background-color: black;
+    }
+}
