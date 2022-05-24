@@ -1,6 +1,6 @@
 {
   "ts-node": {
-    "transpileOnly": false
+    "transpileOnly": true
   },
     "compilerOptions": {
       "sourceMap": true,
