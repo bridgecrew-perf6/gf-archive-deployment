@@ -4,8 +4,8 @@
   "main": "./src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "cd src && npx prisma db push && npx prisma generate && cd..",
-    "start": "ts-node ./src/app.ts",
+    "prestart": "npx prisma db push && npx prisma generate",
+    "start": "ts-node-transpile-only ./src/app.ts",
     "dev": "ts-node-dev -r --rs ./src/app.ts"
   },
   "repository": {
@@ -43,7 +43,8 @@
     "typescript": "^4.6.2"
   },
   "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "seed": "ts-node prisma/seed.ts",
+    "schema": "./src/prisma/schema.prisma"
   },
   "keywords": [],
   "description": ""
