@@ -4,8 +4,8 @@
   "main": "./src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "cd src && npx prisma db push && npx prisma generate",
-    "start": "ts-node src/app.ts",
+    "prestart": "npx prisma db push && npx prisma generate",
+    "start": "ts-node ./src/app.ts",
     "dev": "ts-node-dev -r --rs ./src/app.ts"
   },
   "repository": {
