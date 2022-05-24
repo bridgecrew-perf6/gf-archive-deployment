@@ -5,9 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npx prisma db push && npx prisma generate",
-    "start": "node ./build/app.js",
-    "dev": "ts-node-dev -r --rs ./src/app.ts",
-    "postinstall": "tsc"
+    "start": "ts-node-transpile-only ./src/app.ts",
+    "dev": "ts-node ./src/app.ts"
   },
   "repository": {
     "type": "git",
