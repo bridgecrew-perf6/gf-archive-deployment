@@ -1,4 +1,7 @@
 {
+  "ts-node": {
+    "transpileOnly": false
+  },
     "compilerOptions": {
       "sourceMap": true,
       "outDir": "dist",
