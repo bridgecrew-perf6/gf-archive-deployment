@@ -1,9 +1,7 @@
 import { log } from 'console';
 import express from 'express';
-import { uptime } from 'process';
 import prisma from '../prisma/client';
 import nodemailer from 'nodemailer';
-import SMTPConnection from 'nodemailer/lib/smtp-connection';
 import * as dotenv from 'dotenv';
 
 
