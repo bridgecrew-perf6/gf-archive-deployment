@@ -12,6 +12,11 @@ header {
   color: white;
   background-color: black;
 }
+header a {
+  color: white;
+  text-decoration: none;
+
+}
 header h1 {
   padding-left: 10%;
 }
