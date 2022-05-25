@@ -7,7 +7,11 @@ let router = express.Router();
 
 router.get('/', async (req, res) => {    
     const header = {currSite: 2};  
-    const blogs =  await prisma.blog.findMany({});
+    const blogs =  await prisma.blog.findMany({
+        orderBy: {
+            createdAt: 'desc'
+        }
+    });
     res.render('blogs', {header, blogs});
 });
 
